@@ -1,0 +1,32 @@
+
+# version:2
+
+# sources:
+#     - name: staging
+#       database: stoked-duality-375907
+#       schema: dbt_nyc_trip_data
+
+#       tables:
+#         - name: green_taxi_data
+#         - name: yellow_taxi_data
+#         - name: fhv-vehicle
+
+      
+version: 2
+
+sources:
+    - name: staging
+      #For bigquery:
+      database: stoked-duality-375907
+
+      # For postgres:
+      #database: production
+
+      schema: dbt_nyc_trip_data
+
+      # loaded_at_field: record_loaded_at
+      tables:
+        - name: green_tripdata
+        - name: yellow_tripdata
+
+      
